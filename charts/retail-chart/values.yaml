@@ -1,0 +1,35 @@
+namespace: saurav-ns
+
+configMap:
+  name: retail-app-config
+
+secret:
+  name: retail-app-secret
+
+retailApp:
+  replicas: 3
+  port: 3130
+  labels:
+    app: retail
+  container:
+    name: retail-container
+  image:
+    repository: saiteja2502/userprofileretail
+    tag: latest
+  service:
+    type: LoadBalancer
+    port: 3130
+
+mongodb:
+  replicas: 1
+  port: 27017
+  labels:
+    app: mongodb
+  container:
+    name: mongodb
+  image:
+    repository: mongo
+    tag: latest
+  service:
+    name: mongodb
+    port: 27017

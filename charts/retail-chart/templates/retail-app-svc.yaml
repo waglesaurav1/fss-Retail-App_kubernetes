@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-service
+  namespace: {{ .Values.namespace }}
+spec:
+  type: {{ .Values.retailApp.service.type }}
+  selector:
+    app: {{ .Values.retailApp.labels.app }}
+  ports:
+    - port: {{ .Values.retailApp.service.port }}
+      targetPort: {{ .Values.retailApp.port }}
+      protocol: TCP
