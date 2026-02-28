@@ -8,7 +8,7 @@ spec:
 
   source:
     # GitHub Pages URL (Helm repository)
-    repoURL: https://waglesaurav1.github.io/fss-Retail-App_kubernetes
+    repoURL: https://github.com/waglesaurav1/fss-Retail-App_kubernetes
     path: charts/retail-chart
     # Deploy latest released chart version
     targetRevision: master  # it will deploy the latest version of the chart available in the helm repository
