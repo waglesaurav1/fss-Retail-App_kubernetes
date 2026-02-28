@@ -3,8 +3,10 @@ namespace: saurav-ns
 configMap:
   name: retail-app-config
 
-secret:
-  name: retail-app-secret
+  MONGODB_URI: "mongodb://mongodb:27017/myDatabase"
+  MONGO_INITDB_DATABASE: "myDatabase"
+# secret:
+#   name: retail-app-secret
 
 retailApp:
   replicas: 3
